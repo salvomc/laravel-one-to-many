@@ -35,7 +35,6 @@
                                     <label for="" class="control-label mb-3">Image</label>
                                     <input class="ps-3 form-control" type="file" id="image" name="image" value="{{ $post->image }}">
                                 </div>
-                            <!-- Select -->
                             <div class="form-group mt-4">
                                     <label class="control-lable">Categoria</label>
                                     <select name="category_id" id="category_id" class="form-control">

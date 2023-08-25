@@ -33,11 +33,21 @@
                                         <img width="450px" src="{{ asset('storage/'.$post->image) }}" alt="">
                                     </div>
                                     <label for="" class="control-label mb-3">Image</label>
-                                    <input class="ps-3 form-control" type="file" id="image" name="image"
-                                        value="{{ $post->image }}">
+                                    <input class="ps-3 form-control" type="file" id="image" name="image" value="{{ $post->image }}">
                                 </div>
-                            <div class="col-12 text-center my-5">
+                            <!-- Select -->
+                            <div class="form-group mt-4">
+                                    <label class="control-lable">Categoria</label>
+                                    <select name="category_id" id="category_id" class="form-control">
+                                        <option value="">Seleziona categoria</option>
+                                        @foreach ($categories as $category)
+                                            <option {{ $category->id == old('category_id', $post->category_id) ? 'selected' : '' }} value="{{ $category->id }}">{{ $category->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="col-12 text-center my-5">
                                 <button type="submit" class="btn btn-success">Modify</button>
+                                </div>
                             </div>
                         </div>
                     </div>

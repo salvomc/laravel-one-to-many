@@ -11,6 +11,7 @@
                             <p class="card-text"> {{ $posts->content }}</p>
                             <p class="card-text"> {{ $posts->slug }}</p>
                             <a href="{{ Route('admin.posts.index') }}" class="btn btn-primary">Back Home</a>
+                            <p class="card-text"> {{ $posts->category->name }} </p>
                         </div>
                 </div>
             </div>
